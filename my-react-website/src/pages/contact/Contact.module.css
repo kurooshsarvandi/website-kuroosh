@@ -1,0 +1,428 @@
+/* Contact.module.css - نسخه نهایی */
+
+/* صفحه اصلی */
+.contactWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background:black;
+  color: #e6f1ff;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 3rem;
+}
+
+/* --- هدر --- */
+.contactHeader {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+}
+
+/* عنوان با گرادینت مانند سایر صفحات */
+.contactHeader h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(90deg, #64ffda, #00b4d8, #0077b6);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 4s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(100, 255, 218, 0.3);
+}
+
+@keyframes titleGlow {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  color: #8892b0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- کانتینر اصلی --- */
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- فرم --- */
+.contactForm {
+  flex: 0 0 400px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contactForm:hover {
+  border-color: rgba(100, 255, 218, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(100, 255, 218, 0.1);
+}
+
+.contactForm h3 {
+  font-size: 0.95rem;
+  color: #64ffda;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contactForm h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  background: rgba(17, 34, 64, 0.7);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 12px;
+  color: #e6f1ff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: #64ffda;
+  box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+  background: rgba(17, 34, 64, 0.9);
+}
+
+.contactForm textarea {
+  height: 150px;
+  resize: none;
+}
+
+.sendButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.15), rgba(0, 180, 216, 0.15));
+  border: 1px solid rgba(100, 255, 218, 0.4);
+  color: #64ffda;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+}
+
+.sendButton:hover {
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.25), rgba(0, 180, 216, 0.25));
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(100, 255, 218, 0.3);
+}
+
+/* --- بخش اطلاعات --- */
+.contactInfo {
+  flex: 1;
+  max-width: 800px;
+}
+
+.infoText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  color: #a8b2d1;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- گرید شبکه‌های اجتماعی --- */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.infoBox {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.infoBox:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(100, 255, 218, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(100, 255, 218, 0.15);
+}
+
+.infoBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #64ffda, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.infoBox:hover::before {
+  opacity: 1;
+}
+
+.infoBox i {
+  font-size: 2.8rem;
+  color: #64ffda;
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.infoBox:hover i {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.infoBox h4 {
+  margin: 0.5rem 0 0.3rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.infoBox p {
+  color: #8892b0;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+/* لینک‌های ارتباطی */
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.contactLink:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateX(5px);
+  border-color: rgba(100, 255, 218, 0.4);
+}
+
+/* بخش زمان پاسخگویی */
+.responseTime {
+  background: rgba(100, 255, 218, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(100, 255, 218, 0.15);
+  margin-top: 2rem;
+}
+
+.responseTitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #64ffda;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.responseText {
+  color: #a8b2d1;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.responseText strong {
+  color: #64ffda;
+}
+
+/* --- بنر پایین --- */
+.bottomBanner {
+  position: relative;
+  height: 380px;
+  margin: 4rem 2rem 0;
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.9), rgba(17, 34, 64, 0.9));
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(100, 255, 218, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+
+/* افکت شیشه‌ای برای بنر */
+.bottomBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(100, 255, 218, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 180, 216, 0.1) 0%, transparent 50%);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.bannerContent p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #64ffda;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+
+.bannerContent h1 {
+  font-size: 2.5rem;
+  margin: 0 auto 2rem;
+  color: #ffffff;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.bannerBtn {
+  padding: 1rem 2.5rem;
+  background: rgba(100, 255, 218, 0.1);
+  border: 2px solid #64ffda;
+  border-radius: 50px;
+  color: #64ffda;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bannerBtn:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(100, 255, 218, 0.25);
+}
+
+/* رسپانسیو */
+@media (max-width: 1200px) {
+  .contactContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contactForm {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactHeader h1 {
+    font-size: 2.2rem;
+  }
+  
+  .contactContainer {
+    padding: 0 1rem;
+  }
+  
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bottomBanner {
+    margin: 3rem 1rem 0;
+    height: 320px;
+    padding: 2rem;
+  }
+  
+  .bannerContent h1 {
+    font-size: 1.8rem;
+  }
+  
+  .bannerBtn {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactHeader {
+    padding: 3rem 1rem 2rem;
+  }
+  
+  .contactHeader h1 {
+    font-size: 1.8rem;
+  }
+  
+  .pageSubtitle {
+    font-size: 1rem;
+  }
+  
+  .contactForm {
+    padding: 1.8rem;
+  }
+  
+  .infoBox {
+    padding: 1.5rem;
+  }
+  
+  .bottomBanner {
+    height: 280px;
+  }
+  
+  .bannerContent h1 {
+    font-size: 1.5rem;
+  }
+  
+  .bannerContent p {
+    font-size: 0.9rem;
+  }
+}

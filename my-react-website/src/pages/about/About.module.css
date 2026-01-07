@@ -1,0 +1,382 @@
+/* GLOBAL */
+.aboutPage {
+  background: #0d0d0d;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0px;
+  padding: 0 20px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.heroContent {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Floating Images Styles */
+.floatingImage {
+  position: absolute;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(100, 255, 218, 0.3);
+  animation: float 20s ease-in-out infinite;
+  transition: all 0.5s ease;
+}
+
+.floatingImage:hover {
+  transform: scale(1.05);
+  border-color: rgba(100, 255, 218, 0.6);
+  box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+}
+
+.floatingImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* سایزهای مختلف */
+.sizeSmall {
+  width: 120px;
+  height: 120px;
+}
+
+.sizeMedium {
+  width: 180px;
+  height: 180px;
+}
+
+.sizeLarge {
+  width: 250px;
+  height: 300px;
+}
+
+/* موقعیت‌های مختلف */
+.topRight {
+  top: 15%;
+  right: 8%;
+  animation-delay: 0s;
+}
+
+.topLeft {
+  top: 20%;
+  left: 5%;
+  animation-delay: 5s;
+}
+
+.centerLeft {
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  animation-delay: 10s;
+}
+
+.centerRight {
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  animation-delay: 15s;
+}
+
+.bottomLeft {
+  bottom: 10%;
+  left: 8%;
+  animation-delay: 7s;
+}
+
+.bottomRight {
+  bottom: 15%;
+  right: 5%;
+  animation-delay: 12s;
+}
+
+/* انیمیشن floating */
+@keyframes float {
+  0%, 100% { 
+    transform: translate(0, 0) rotate(0deg); 
+  }
+  25% { 
+    transform: translate(15px, -20px) rotate(3deg); 
+  }
+  50% { 
+    transform: translate(-20px, 15px) rotate(-2deg); 
+  }
+  75% { 
+    transform: translate(10px, 25px) rotate(1deg); 
+  }
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.7;
+}
+
+/* ABOUT CONTENT */
+.aboutContent {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 40px;
+  background: #0d0d0d;
+}
+
+.aboutImage img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.aboutText h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.aboutText h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.aboutText p {
+  line-height: 1.8;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.btnPrimary {
+  padding: 13px 36px;
+  background: #ffffff;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  color: #000000;
+}
+
+.btnPrimary:hover {
+  background: #e6e6e6;
+}
+
+/* SKILLS */
+.skills {
+  padding: 80px 40px;
+  text-align: left;
+  background: #0d0d0d;
+}
+
+.skills h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.skills p {
+  width: 60%;
+  opacity: 0.75;
+  margin-bottom: 40px;
+}
+
+.skillBars {
+  width: 100%;
+}
+
+.skill {
+  margin-bottom: 30px;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skillHeader span {
+  font-size: 16px;
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #fff;
+  width: 0%;
+  transition: width 1s ease;
+}
+
+/* STATS BOXES */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  background: #0d0d0d;
+}
+
+.statBox {
+  text-align: center;
+  width: 23%;
+  min-width: 180px;
+  margin-bottom: 20px;
+}
+
+.statBox strong {
+  font-size: 36px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.statBox p {
+  opacity: 0.7;
+}
+
+/* CTA SECTION */
+.cta {
+  position: relative;
+  height: 330px;
+  background: url("/public/air.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.ctaOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.ctaContent h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.ctaContent h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 15px 0 25px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .aboutContent {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .skills {
+    padding: 60px 20px;
+  }
+
+  .skills p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .stats {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .statBox {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutText h2 {
+    font-size: 30px;
+  }
+
+  .ctaContent h2 {
+    font-size: 28px;
+  }
+
+  .statBox {
+    width: 100%;
+  }
+  
+  .aboutContent,
+  .skills {
+    padding: 40px 15px;
+  }
+}
+/* برای موبایل */
+@media (max-width: 768px) {
+  .floatingImage {
+    display: none; /* یا سایز کوچک‌تر */
+  }
+  
+  .sizeSmall {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .sizeMedium {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .sizeLarge {
+    width: 160px;
+    height: 160px;
+  }
+}

@@ -1,0 +1,271 @@
+/* src/pages/projects/subpages/Articles/Articles.module.css */
+
+.articles {
+  color: #e6f1ff;
+  padding: 1rem;
+}
+
+/* هدر */
+.articlesHeader {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #64ffda;
+  background: linear-gradient(90deg, #64ffda, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: #8892b0;
+  margin: 0 0 1.5rem 0;
+}
+
+/* فیلتر موضوعات */
+.topicFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.topicBtn {
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: #8892b0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.topicBtn:hover {
+  background: rgba(100, 255, 218, 0.05);
+  color: #64ffda;
+}
+
+.activeTopic {
+  background: rgba(100, 255, 218, 0.1);
+  border-color: #64ffda;
+  color: #64ffda;
+}
+
+/* لیست مقالات */
+.articlesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* کارت مقاله */
+.articleCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: all 0.3s ease;
+}
+
+.articleCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.articleMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.articleTopic {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.articleDate {
+  color: #8892b0;
+  font-size: 0.9rem;
+}
+
+.articleContent {
+  margin-bottom: 1.5rem;
+}
+
+.articleTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+}
+
+.articleTitle a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.articleTitle a:hover {
+  color: #64ffda;
+}
+
+.articleExcerpt {
+  color: #a8b2d1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* تگ‌ها */
+.articleTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background: rgba(100, 255, 218, 0.08);
+  color: #64ffda;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(100, 255, 218, 0.15);
+}
+
+/* فوتر مقاله */
+.articleFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.articleStats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8892b0;
+  font-size: 0.9rem;
+}
+
+.readMoreLink {
+  color: #64ffda;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.readMoreLink:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* وقتی مقاله‌ای نیست */
+.noArticles {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.noArticles h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.noArticles p {
+  color: #8892b0;
+}
+
+/* CTA */
+.ctaSection {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  margin-top: 2rem;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  color: #a8b2d1;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  padding: 0.8rem 2rem;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  border-radius: 8px;
+  color: #64ffda;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+  .articleFooter {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .articleStats {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .topicFilters {
+    justify-content: center;
+  }
+}

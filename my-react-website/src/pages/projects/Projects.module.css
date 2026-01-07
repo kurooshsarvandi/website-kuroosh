@@ -1,0 +1,310 @@
+/* src/pages/Projects/Projects.module.css */
+
+/* صفحه اصلی */
+.projectsPage {
+  min-height: 100vh;
+  background-color: black; /* آبی تیره اصلی (همان overlay صفحه Home) */
+  color: #e6f1ff; /* رنگ متن روشن (همان .heroDescription) */
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "header header"
+    "sidebar content";
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.pageHeader {
+  grid-area: header;
+  padding: 2rem 3rem;
+  background: rgba(10, 25, 47, 0.9);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.tabsSidebar {
+  grid-area: sidebar;
+  /* بقیه استایل‌ها */
+}
+
+.tabContent {
+  grid-area: content;
+  padding: 2rem;
+  overflow-y: auto;
+}
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(90deg, #64ffda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pageSubtitle {
+  font-size: 1.1rem;
+  color: #8892b0; /* رنگ خاکستری-آبی برای زیرعنوان (مکمل متن اصلی) */
+  margin: 0;
+}
+
+
+/* نوار تب‌های کناری */
+.tabsSidebar {
+  grid-area: sidebar;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: (20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* افکت شیشه‌ای */
+.tabsSidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  z-index: -1;
+}
+
+/* ناوبری تب‌ها */
+.tabsNavigation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tabButton {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  overflow: hidden;
+}
+
+.tabButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  transform: translateX(5px);
+}
+
+.tabButton.activeTab {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.tabIcon {
+  font-size: 1.3rem;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.tabLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* افکت نور برای تب فعال */
+.activeGlow {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(180deg, #64ffda, #64ffda);
+  border-radius: 0 4px 4px 0;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { 
+    opacity: 1;
+    box-shadow: 0 0 10px #60a5fa;
+  }
+  50% { 
+    opacity: 0.7;
+    box-shadow: 0 0 20px #a78bfa;
+  }
+}
+
+/* فوتر سایدبار */
+.sidebarFooter {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebarFooter p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  margin: 0;
+}
+
+/* محتوای تب فعال */
+.tabContent {
+  grid-area: content;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: contentFade 0.4s ease-out;
+}
+
+@keyframes contentFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* رسپانسیو */
+@media (max-width: 1024px) {
+  .projectsPage {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+      "header"
+      "sidebar"
+      "content";
+    margin-top: 100px; /* این margin کل صفحه را پایین می‌برد */
+    min-height: calc(100vh - 60px);
+  }
+  
+
+  
+  .pageHeader {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0px; /* ✨ تغییر از 60px به 0 - چون کل صفحه قبلاً margin-top خورده */
+    z-index: 100;
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    margin-bottom: 1rem; /* فاصله از سایدبار */
+  }
+  
+  .pageTitle {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .pageSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .tabsSidebar {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tabsNavigation {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .tabButton {
+    flex: 1;
+    min-width: 150px;
+    justify-content: center;
+    padding: 0.8rem;
+  }
+  
+  .activeGlow {
+    width: 60%;
+    height: 4px;
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .tabContent {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsPage {
+    margin-top: 150px; /* ممکن است نویگیشن بار در موبایل کوچک‌تر باشد */
+    min-height: calc(100vh - 56px);
+  }
+  
+  .pageHeader {
+    top: 0; /* همچنان 0 */
+    padding: 0.8rem 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.6rem; /* کمی کوچک‌تر برای موبایل */
+  }
+  
+  .tabButton {
+    min-width: 120px; /* کوچک‌تر برای موبایل */
+    padding: 0.7rem;
+  }
+  
+  .tabLabel {
+    font-size: 0.85rem;
+  }
+}
+
+/* برای موبایل‌های خیلی کوچک */
+@media (max-width: 480px) {
+  .projectsPage {
+    margin-top: 50px;
+    min-height: calc(100vh - 50px);
+  }
+  
+  .tabsNavigation {
+    flex-direction: column; /* تب‌ها عمودی شوند */
+    gap: 0.5rem;
+  }
+  
+  .tabButton {
+    min-width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .pageTitle {
+    font-size: 1.4rem;
+  }
+}

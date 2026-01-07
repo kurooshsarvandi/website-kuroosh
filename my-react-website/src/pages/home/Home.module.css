@@ -1,0 +1,328 @@
+.home {
+  padding: 0;
+  height: 100vh; /* ارتفاع دقیقاً یک صفحه */
+  color: #ffffff;
+  background: url('/public/moon.gif') center/cover no-repeat fixed;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* جلوگیری از اسکرول */
+}
+
+/* اضافه کردن overlay برای خوانایی بهتر متن */
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.7);
+  z-index: -1;
+}
+
+.hero {
+  flex: 0 0 60vh; /* ارتفاع ثابت 60% از viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+  min-height: 400px; /* حداقل ارتفاع */
+}
+
+.heroContent {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  backdrop-filter: blur(5px);
+}
+
+.heroGreeting {
+  color: #64ffda;
+  font-size: 2.1rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Courier New', monospace;
+}
+
+.heroTitle {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.heroTitle .accent {
+  color: #64ffda;
+  display: block;
+}
+
+.heroDescription {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  max-width: 550px;
+  color: #e6f1ff;
+  padding: 0 1rem;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  padding: 0.7rem 1.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btnPrimary {
+  background-color: #64ffda;
+  color: #0a192f;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+}
+
+.btnSecondary:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+}
+
+/* بخش مهارت‌ها - ارتفاع 40% باقیمانده */
+.skillsSection {
+  flex: 0 0 40vh; /* ارتفاع ثابت 40% از viewport */
+  padding: 0.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px; /* حداقل ارتفاع */
+}
+
+.sectionTitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-weight: bold;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #64ffda;
+}
+
+/* کانتینر اسلاید */
+.skillsSliderContainer {
+  width: 100%;
+  max-width: 1000px;
+  height: 220px; /* ارتفاع ثابت برای اسلاید */
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.skillsSlider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.skillsSlide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  padding: 0.5rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* استایل کارت مهارت */
+.skillCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 150px;
+}
+
+.skillCard:hover {
+  transform: translateY(-3px);
+  border-color: #64ffda;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.skillIcon {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+  color: #64ffda;
+}
+
+.skillCard h3 {
+  color: #ffffff;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.skillCard p {
+  color: #e6f1ff;
+  line-height: 1.5;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* نقاط ناوبری اسلاید */
+.sliderNav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.sliderDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sliderDot.active {
+  background: #64ffda;
+  transform: scale(1.3);
+}
+
+/* رسپانسیو برای صفحه‌های کوچک */
+@media (max-width: 768px) {
+  .home {
+    height: 100vh;
+  }
+  
+  .hero {
+    flex: 0 0 55vh;
+    padding: 0 1rem;
+    min-height: 350px;
+  }
+  
+  .heroContent {
+    padding: 1.8rem 1.5rem;
+    width: 95%;
+  }
+  
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+    padding: 0;
+  }
+  
+  .skillsSection {
+    flex: 0 0 45vh;
+    padding: 0 1rem 1rem;
+    min-height: 250px;
+  }
+  
+  .skillsSliderContainer {
+    height: 180px;
+  }
+  
+  .skillsSlide {
+    grid-template-columns: 1fr; /* یک ستونه در موبایل */
+    gap: 0.8rem;
+  }
+  
+  .skillCard {
+    padding: 1rem;
+    min-height: 120px;
+  }
+  
+  .skillIcon {
+    font-size: 1.7rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    flex: 0 0 50vh;
+  }
+  
+  .skillsSection {
+    flex: 0 0 50vh;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroGreeting {
+    font-size: 1rem;
+  }
+}

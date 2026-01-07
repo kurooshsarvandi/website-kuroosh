@@ -9,7 +9,15 @@ const Header = () => {
     <header className="header">
       <nav className="nav">
         <div className="logo">
-          <Link to="/">کوروش</Link>
+          <Link to="/">
+            {/* لوگو رو برگردون */}
+            <img 
+              src="logo.jpg" 
+              alt="Kuroosh Logo" 
+              className="logo-image"
+            />
+            <span className="logo-text"></span>
+          </Link>
         </div>
         
         <ul className="nav-links">
@@ -18,7 +26,7 @@ const Header = () => {
               to="/" 
               className={location.pathname === '/' ? 'active' : ''}
             >
-              خانه
+              HOME
             </Link>
           </li>
           <li>
@@ -26,7 +34,7 @@ const Header = () => {
               to="/about" 
               className={location.pathname === '/about' ? 'active' : ''}
             >
-              درباره من
+              About us
             </Link>
           </li>
           <li>
@@ -34,7 +42,7 @@ const Header = () => {
               to="/projects" 
               className={location.pathname === '/projects' ? 'active' : ''}
             >
-              پروژه‌ها
+              Portfolio
             </Link>
           </li>
           <li>
@@ -42,7 +50,7 @@ const Header = () => {
               to="/contact" 
               className={location.pathname === '/contact' ? 'active' : ''}
             >
-              تماس
+              Contact
             </Link>
           </li>
         </ul>

@@ -1,0 +1,235 @@
+/* src/pages/projects/subpages/Certifications/Certifications.module.css */
+
+.certifications {
+  color: #e6f1ff;
+  padding: 1rem;
+}
+
+/* هدر */
+.certHeader {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #64ffda;
+  background: linear-gradient(90deg, #64ffda, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: #8892b0;
+  margin: 0;
+}
+
+/* Timeline */
+.certTimeline {
+  margin-bottom: 3rem;
+}
+
+.yearGroup {
+  margin-bottom: 3rem;
+}
+
+.yearTitle {
+  font-size: 1.5rem;
+  color: #64ffda;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.certCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* کارت گواهینامه */
+.certCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.certCard:hover {
+  transform: translateX(5px);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certIcon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(100, 255, 218, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #64ffda;
+}
+
+.certContent {
+  flex: 1;
+}
+
+.certHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.certTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.certDate {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.certIssuer {
+  color: #a8b2d1;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* مهارت‌ها */
+.certSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.skillTag {
+  background: rgba(100, 255, 218, 0.08);
+  color: #64ffda;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(100, 255, 218, 0.15);
+}
+
+/* فوتر کارت */
+.certFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.credentialId {
+  color: #8892b0;
+  font-size: 0.9rem;
+  font-family: 'Courier New', monospace;
+}
+
+.verifyLink {
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.verifyLink:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* آمار */
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.statItem {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #64ffda;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: #a8b2d1;
+  font-size: 0.9rem;
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+  .certCard {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .certIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .statsSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .certHeaderRow {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .certFooter {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+  
+  .statsSection {
+    grid-template-columns: 1fr;
+  }
+}

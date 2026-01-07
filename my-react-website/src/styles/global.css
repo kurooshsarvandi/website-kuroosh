@@ -1,0 +1,69 @@
+/* متغیرهای رنگ برای تم دارک */
+:root {
+  --dark-bg: #0a192f;
+  --dark-bg-light: #112240;
+  --dark-text: #8892b0;
+  --dark-text-light: #ccd6f6;
+  --accent: #64ffda;
+  --accent-light: rgba(100, 255, 218, 0.1);
+  --nav-bg: rgba(10, 25, 47, 0.85);
+  --shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* اسکرول بار استایل */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4fd3b6;
+}
+/* متغیرهای رنگ برای تم دارک */
+:root {
+  --dark-bg: #8a8f97;
+  --dark-bg-light: #737a86;
+  --dark-text: #8892b0;
+  --dark-text-light: #ccd6f6;
+  --accent: #425e58;
+  --accent-light: rgba(16, 154, 122, 0.1);
+  --nav-bg: rgba(10, 25, 47, 0.95); /* شفافیت بیشتر */
+  --shadow: 0 10px 30px -15px rgba(2, 11, 24, 0.7);
+  --card-bg: rgba(7, 40, 99, 0.7); /* برای کارت‌ها */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--dark-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+

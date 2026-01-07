@@ -17,10 +17,7 @@ body {
 
 .main-content {
   margin-top: 80px; /* برای فیکس شدن هدر */
-  padding: 2rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+ 
 }
 
 /* استایل پایه برای صفحات */

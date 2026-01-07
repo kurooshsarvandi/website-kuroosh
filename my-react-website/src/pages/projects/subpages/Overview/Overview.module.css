@@ -1,0 +1,175 @@
+/* src/pages/Projects/subpages/Overview/Overview.module.css */
+.overview {
+  color: white;
+}
+
+/* بخش قهرمان */
+.heroSection {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.heroTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(90deg, #64ffda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  max-width: 800px;
+}
+
+/* آمار سریع */
+.quickStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.statItem {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #64ffda;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* راهنمای بخش‌ها */
+.sectionsGuide {
+  margin-bottom: 3rem;
+}
+
+.guideTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  color: white;
+}
+
+.guideGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.guideCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.guideCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.guideIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.guideCard h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.8rem 0;
+  color: white;
+}
+
+.guideCard p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* CTA */
+.ctaSection {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.ctaText {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 1.5rem;
+  }
+  
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+  
+  .quickStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .guideGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaText {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quickStats {
+    grid-template-columns: 1fr;
+  }
+  
+  .statItem {
+    padding: 1rem;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+}
