@@ -11,13 +11,13 @@ const ProjectsList = () => {
   const [projects] = useState([
     {
       id: 1,
-      title: "E-Commerce Dashboard",
-      description: "Full-featured admin panel for online store with real-time analytics",
+      title: "Weather Application",
+      description: "A modern Weather Application built with React and Vite, styled with Tailwind CSS. This project focuses on learning React Hooks (useState, useEffect), API integration, and responsive UI design.",
       category: "react",
-      technologies: ["React", "Node.js", "MongoDB", "Chart.js"],
-      demoLink: "#",
-      githubLink: "#",
-      image: "/projects/ecommerce.jpg",
+      technologies: ["React 18", "Vite", "Tailwind CSS v4", "React Icons"],
+      demoLink: "kuroosh-weather.vercel.app",
+      githubLink: "https://github.com/kurooshsarvandi/Weather-Application",
+      image: "image/webp_converted/weather.webp",
       featured: true
     },
     // ... حداقل ۵-۶ پروژه دیگر
