@@ -15,14 +15,38 @@ const ProjectsList = () => {
       description: "A modern Weather Application built with React and Vite, styled with Tailwind CSS. This project focuses on learning React Hooks (useState, useEffect), API integration, and responsive UI design.",
       category: "react",
       technologies: ["React 18", "Vite", "Tailwind CSS v4", "React Icons"],
-      demoLink: "kuroosh-weather.vercel.app",
+      demoLink: "https://kuroosh-weather.vercel.app/",
       githubLink: "https://github.com/kurooshsarvandi/Weather-Application",
       image: "image/webp_converted/weather.webp",
       featured: true
     },
     // ... حداقل ۵-۶ پروژه دیگر
-  ]);
   
+
+  
+    {
+      id: 2,
+      title: " Cafe Rizvan  ",
+      description: "Cafe Rizvan is a fully responsive, modern coffee shop website built with React.js, featuring elegant glass-morphism design and interactive user experiences. This project showcases professional web development skills with a focus on user engagement and aesthetic appeal.",
+      category: "react",
+      technologies: ["React 18", "JavaScript (ES6+)", "CSS3", "React Icons"],
+      demoLink: "https://https://cofe-rizhvan.vercel.app/",
+      githubLink: "https://github.com/kurooshsarvandi/cofe-shop",
+      image: "image/webp_converted/cofe.webp",
+      featured: true
+    },
+   
+    {
+      id: 2,
+      title: "chatbot",
+      description: "a professional chat bot i write with JavaScript and React and Vite",
+      category: "react",
+      technologies: ["React 18", "JavaScript (ES6+)", "CSS3", "Vite"],
+      githubLink: "https://github.com/kurooshsarvandi/chatbot",
+      image: "image/webp_converted/cofe.webp",
+      featured: true
+    },
+]);
   // فیلتر کردن پروژه‌ها
   const filteredProjects = projects.filter(project => {
     const matchesCategory = filter === 'all' || project.category === filter;
@@ -99,10 +123,20 @@ const ProjectsList = () => {
               </div>
               
               <div className={styles.projectLinks}>
-                <a href={project.demoLink} className={styles.demoLink}>
+                <a
+                 href={project.demoLink} 
+                 className={styles.demoLink}
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 >
                   <i className="bi bi-play-circle"></i> Live Demo
                 </a>
-                <a href={project.githubLink} className={styles.githubLink}>
+                <a 
+                  href={project.githubLink} 
+                  className={styles.githubLink}
+                 target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="bi bi-github"></i> Source Code
                 </a>
               </div>
