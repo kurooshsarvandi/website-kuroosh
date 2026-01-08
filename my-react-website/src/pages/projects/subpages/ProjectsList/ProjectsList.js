@@ -37,14 +37,14 @@ const ProjectsList = () => {
     },
    
     {
-      id: 2,
+      id: 3,
       title: "chatbot",
       description: "a professional chat bot i write with JavaScript and React and Vite",
       category: "react",
       technologies: ["React 18", "JavaScript (ES6+)", "CSS3", "Vite"],
       githubLink: "https://github.com/kurooshsarvandi/chatbot",
-      image: "image/webp_converted/cofe.webp",
-      featured: true
+      image: "image/webp_converted/chatbot.webp",
+      featured: false
     },
 ]);
   // فیلتر کردن پروژه‌ها
